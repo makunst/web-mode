@@ -10805,6 +10805,7 @@ Prompt user if TAG-NAME isn't provided."
           (setq counter (1+ counter)))
          ((eq (get-text-property (point) 'tag-type) 'end)
           (setq counter (1- counter)))
+         ((eq (get-text-property (point) 'tag-type) 'void))
          (t
           (setq counter (1+ counter)))
          )
